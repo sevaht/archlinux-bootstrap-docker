@@ -87,7 +87,7 @@ RUN set -euo pipefail \
                 && \"\${HOME}/.bash/install.sh\" \
             " \
     ; else \
-        su "${ADMIN_USER}" -c "python -m pipx ensurepath" \
+        su "${ADMIN_USER}" -c "uv tool update-shell" \
     ; fi \
     && if [ -z "${NO_DEV_TOOLS:-}" ]; then \
         pacman -S --noconfirm --needed \

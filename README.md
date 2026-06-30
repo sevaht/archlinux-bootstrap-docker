@@ -106,12 +106,12 @@ but because reflector DOES NOT require root privileges it's best to only give
 it when writing the file.
 
 # Upgrading
-Certain packages are installed for ONLY the admin user via "pipx", so in
+Certain packages are installed for ONLY the admin user via "uv", so in
 addition to updating your system via pacman, in order to update those you will
-need to run pipx as the admin user (*NOT root*).
+need to run uv as the admin user (*NOT root*).
 
-In order to list packages installed via pipx, you can run `pipx list` and to
-upgrade all packages installed that way you can run `pipx upgrade-all`.
+In order to list packages installed via uv, you can run `uv tool list` and to
+upgrade all packages installed that way you can run `uv tool upgrade --all`.
 
 # Extras
 It is not really relevant to container/WSL usages, but I included a script
